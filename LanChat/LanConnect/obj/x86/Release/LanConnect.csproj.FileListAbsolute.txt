@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\bin\Release\LanConnect.exe.config
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\bin\Release\LanConnect.exe.manifest
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\bin\Release\LanConnect.application
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\bin\Release\LanConnect.exe
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\bin\Release\LanConnect.pdb
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.Form1.resources
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.exe.manifest
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.application
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.exe
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.pdb
