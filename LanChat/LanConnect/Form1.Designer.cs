@@ -155,9 +155,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 12);
+            this.label4.Size = new System.Drawing.Size(119, 12);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Made by Pig";
+            this.label4.Text = "Made by 15220720033";
             // 
             // button4
             // 
