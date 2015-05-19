@@ -24,7 +24,7 @@ namespace LanConnect
         bool recstatus = false;     //Status Flag
         //Thread thrRec;
         UdpClient udprec;
-        IPEndPoint lhost = new IPEndPoint(IPAddress.Loopback, 60000);           //ip endpoint for test
+        //IPEndPoint lhost = new IPEndPoint(IPAddress.Loopback, 60000);           //ip endpoint for test
         IPEndPoint lep;
         IPEndPoint rep;
         IPEndPoint aep;
@@ -33,7 +33,7 @@ namespace LanConnect
         public Form1()
         {
             InitializeComponent();
-            textBox4.AppendText("localhost = " + lhost + Environment.NewLine);                      //Show current ip address
+            //textBox4.AppendText("localhost = " + lhost + Environment.NewLine);                      //Show current ip address
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
         }
 
