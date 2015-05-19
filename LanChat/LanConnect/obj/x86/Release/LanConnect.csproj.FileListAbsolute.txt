@@ -10,3 +10,4 @@ C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\ob
 C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.application
 C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.exe
 C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.pdb
+C:\Users\Administrator\Desktop\Coding\GitHub\LanChat\trunk\LanChat\LanConnect\obj\x86\Release\LanConnect.csprojResolveAssemblyReference.cache
