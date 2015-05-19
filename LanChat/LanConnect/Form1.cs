@@ -12,6 +12,8 @@ using System.Threading;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security;
+using LanConnect.Class;
+using LanConnect.Class.L2;
 
 
 namespace LanConnect
@@ -58,8 +60,11 @@ namespace LanConnect
             TextBox textbox6 = (TextBox)((UdpState)(ar.AsyncState)).textbox6;
             if (checkBox1.Checked & !String.IsNullOrWhiteSpace(textbox6.Text))
             {
-                EncryptionStream Encrypt = new EncryptionStream();
-                byte[] Msg = Encrypt.aes256_en_de(udprec.EndReceive(ar, ref rep), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), MD5.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), false);    //Decryption Required
+                //EncryptionStream Encrypt = new EncryptionStream();
+                //byte[] Msg = Encrypt.aes256_en_de(udprec.EndReceive(ar, ref rep), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), false, MD5.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)));    //Decryption Required
+                EncryptDataProtocol edp = new EncryptDataProtocol();
+                edp.encrypt = false;
+                byte[] Msg = edp.GetData(udprec.EndReceive(ar, ref rep), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)));
                 textbox.AppendText("Received: " + Encoding.UTF32.GetString(Msg) + Environment.NewLine);
             }
             else
@@ -193,8 +198,11 @@ namespace LanConnect
                 }
                 else if (checkBox1.Checked & !String.IsNullOrWhiteSpace(textBox6.Text))
                 {
-                    EncryptionStream Encrypt = new EncryptionStream();
-                    byte[] Msg = Encrypt.aes256_en_de(Encoding.UTF32.GetBytes(textBox5.Text), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), MD5.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), true);
+                    //EncryptionStream Encrypt = new EncryptionStream();
+                    //byte[] Msg = Encrypt.aes256_en_de(Encoding.UTF32.GetBytes(textBox5.Text), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), true, MD5.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)));
+                    EncryptDataProtocol edp = new EncryptDataProtocol();
+                    edp.encrypt = true;
+                    byte[] Msg = edp.GetData(Encoding.UTF32.GetBytes(textBox5.Text), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)));
                     udprec.Send(Msg, Msg.Length, rep);
                 }
                 else

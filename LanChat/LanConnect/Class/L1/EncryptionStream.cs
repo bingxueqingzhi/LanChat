@@ -10,7 +10,11 @@ namespace LanConnect
 {
     class EncryptionStream
     {
-        public byte[] aes256_en_de(byte[] data, byte[] pwd, byte[] IV, bool encrypt)
+
+        byte[] IV = new byte[16];
+
+
+        public byte[] aes256_en_de(byte[] data, byte[] pwd, bool encrypt, byte[] IV)
         {
             Aes aes = Aes.Create();
             aes.Mode = CipherMode.CFB;
@@ -51,7 +55,7 @@ namespace LanConnect
                 }
             }
         }
-
+        /*
         public byte[] rsa_en_de(byte[] data, byte[] pwd, bool encrypt)
         {
             RSA rsa = RSA.Create();
@@ -67,5 +71,6 @@ namespace LanConnect
 
             return 0;
         }
+        */
     }
 }

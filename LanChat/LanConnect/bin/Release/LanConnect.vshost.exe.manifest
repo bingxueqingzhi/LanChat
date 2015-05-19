@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LanConnect.exe" size="85008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LanConnect.exe" size="85520">
       <assemblyIdentity name="LanConnect" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BPsptpLaTb08q96c0Rue/PibVrdF7JdG7toHzZMwXXM=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5nKIoRa/d3/DqkjBbQQ3sUuCFn0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -59,8 +59,8 @@
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jLCHdLm7v47ACsSCc72IOp8bA051ZvlIJCmYB91hk5o=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cpzNzlRjZspwKGLNlX6RAlU3880=</dsig:DigestValue>
     </hash>
   </file>
   <file name="www.ico.la_8a67467895e955cc1820b76c0f075ed0_128X128.ico" size="67646">
@@ -68,8 +68,8 @@
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>a143ksAHJpC/CseUndL2hC5onB4jHJK1s6SyS4JmKXQ=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NKVxujFB0E7R0OuULF+YAIGqUqU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

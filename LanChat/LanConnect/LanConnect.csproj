@@ -84,7 +84,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EncryptionStream.cs" />
+    <Compile Include="Class\L1\EncryptionStream.cs" />
+    <Compile Include="Class\L2\EncryptDataProtocol.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
