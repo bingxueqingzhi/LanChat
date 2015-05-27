@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Security;
 using System.IO;
 
-namespace LanConnect
+namespace LanConnect.Class.L1
 {
     class EncryptionStream
     {

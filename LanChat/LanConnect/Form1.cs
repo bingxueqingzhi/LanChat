@@ -51,14 +51,14 @@ namespace LanConnect
 
         //public static byte[] Msg;
 
-        public void udprecCallback(IAsyncResult ar)
+        public void udprecCallback(IAsyncResult ar)                                         //UDPClient AsyncCallBack//UDPClient异步响应
         {
             UdpClient udprec = (UdpClient)((UdpState)(ar.AsyncState)).u;
             IPEndPoint rep = (IPEndPoint)((UdpState)(ar.AsyncState)).e;
             TextBox textbox = (TextBox)((UdpState)(ar.AsyncState)).textbox;
             CheckBox checkbox1 = (CheckBox)((UdpState)(ar.AsyncState)).checkbox;
             TextBox textbox6 = (TextBox)((UdpState)(ar.AsyncState)).textbox6;
-            if (checkBox1.Checked & !String.IsNullOrWhiteSpace(textbox6.Text))
+            if (checkBox1.Checked & !String.IsNullOrWhiteSpace(textbox6.Text))              //需要解密的情况
             {
                 //EncryptionStream Encrypt = new EncryptionStream();
                 //byte[] Msg = Encrypt.aes256_en_de(udprec.EndReceive(ar, ref rep), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), false, MD5.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)));    //Decryption Required
@@ -69,9 +69,9 @@ namespace LanConnect
             }
             else
             {
-                textbox.AppendText("Received: " + Encoding.UTF32.GetString(udprec.EndReceive(ar, ref rep)) + Environment.NewLine);  //Decryption not required
+                textbox.AppendText("Received: " + Encoding.UTF32.GetString(udprec.EndReceive(ar, ref rep)) + Environment.NewLine);  //Decryption not required//不需要解密的情况
             }
-            UdpState st = new UdpState();
+            UdpState st = new UdpState();                                                   //循环传递对象并启动异步响应
             st.e = rep;
             st.u = udprec;
             st.textbox = textbox;
@@ -80,7 +80,7 @@ namespace LanConnect
             udprec.BeginReceive(new AsyncCallback(udprecCallback), st);
         }
 
-        public class UdpState
+        public class UdpState                                                                       //传递需要委托访问的对象
         {
             public IPEndPoint e;
             public UdpClient u;
@@ -89,7 +89,7 @@ namespace LanConnect
             public TextBox textbox6;
         }
 
-        private void button1_Click(object sender, EventArgs e)                                      //Set UDP client properties and start listening
+        private void button1_Click(object sender, EventArgs e)                                      //Set UDP client properties and start listening//设置UDPClient参数并开始侦听
         {
             
             if (!recstatus)
@@ -196,7 +196,7 @@ namespace LanConnect
                     MessageBox.Show("You are using encryption mode! Please enter password!");
                     goto jieshu;
                 }
-                else if (checkBox1.Checked & !String.IsNullOrWhiteSpace(textBox6.Text))
+                else if (checkBox1.Checked & !String.IsNullOrWhiteSpace(textBox6.Text))                 //Encryption needed//需要加密的情况
                 {
                     //EncryptionStream Encrypt = new EncryptionStream();
                     //byte[] Msg = Encrypt.aes256_en_de(Encoding.UTF32.GetBytes(textBox5.Text), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)), true, MD5.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)));
@@ -205,7 +205,7 @@ namespace LanConnect
                     byte[] Msg = edp.GetData(Encoding.UTF32.GetBytes(textBox5.Text), SHA256.Create().ComputeHash(Encoding.UTF32.GetBytes(textBox6.Text)));
                     udprec.Send(Msg, Msg.Length, rep);
                 }
-                else
+                else                                                                                    //不需要加密的情况
                 {
                     udprec.Send(Encoding.UTF32.GetBytes(textBox5.Text), Encoding.UTF32.GetByteCount(textBox5.Text), rep);
                 }
